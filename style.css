@@ -6,7 +6,6 @@ html, body {
 }
 
 .container {
-margin: auto;
     position: relative;
     left: 50%;
     top: 50%;
@@ -14,7 +13,7 @@ margin: auto;
 }
 
 .main{
-    position: relative;
+    position: absolute;
 	left: 50%;
     bottom: 0;
     transform: translate(-50%, -50%);
