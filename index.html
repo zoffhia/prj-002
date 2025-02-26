@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>SORRY NA PO &#128532</title>
+
+    <style>
+        body{
+            background-color: rgb(127, 127, 76);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cat">
+            
+            <div class="cat-head">
+                <div class="highlights"></div>
+                <div class="left-eye">
+                    <div class="inner-left"></div>
+                </div>
+                <div class="right-eye">
+                    <div class="inner-right"></div>
+                </div>
+
+                <div class="left-ear"></div>
+                <div class="right-ear"></div>
+
+                <div class="nose"></div>
+                <div class="mouth"></div>
+                <div class="tongue"></div>
+
+                <div class="left">
+                    <div class="left-whiskers"></div>
+                    <div class="left-whiskers"></div>
+                    <div class="left-whiskers"></div>
+                </div>
+                
+                <div class="right">
+                    <div class="right-whiskers"></div>
+                    <div class="right-whiskers"></div>
+                    <div class="right-whiskers"></div>
+                </div>
+                
+            </div>
+
+            <div class="left-paw"></div>
+            <div class="right-paw"></div>
+        </div>
+
+        <div class="main">
+            <div class="envelope" ></div>
+            <div class="flap"></div>
+            <div class="heart" type="button" data-bs-toggle="modal" data-bs-target="#message"></div>
+        </div>
+        
+    </div>
+
+    <div class="modal" id="message">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modalTitle"></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                
+                <div class="modal-body text-center">
+                    <img src="images/sadCat.gif" class="m-5" width="400px" id="modalImage">
+                </div>
+    
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-warning btn-lg text-center" id="nextImage">Galit ka pa ba sakin?</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+
+<script>
+
+    const images = ["images/sadCat02.gif", "images/sadCat.gif", "images/sadCat01.gif","images/cat.gif"];
+    const buttonLabels = ["Sorry na po", "Wag ka na magalit, please?", "Please, love?","Magpapakabait na po ako"];
+
+    let currentIndex = 0;
+    const modalImage = document.getElementById("modalImage");
+    const nextImage = document.getElementById("nextImage");
+
+    nextImage.addEventListener("click", function() {
+        currentIndex = (currentIndex + 1) % images.length;
+        modalImage.src = images[currentIndex];
+        nextImage.textContent = buttonLabels[currentIndex];
+    });
+</script>
+</html>
